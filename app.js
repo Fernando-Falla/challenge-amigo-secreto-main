@@ -2,7 +2,7 @@
 //Arrancamos hoy 16 de marzo, si. un poco tarde
 //esta tarea me ha llevado toda la tarde del domingo
 
-let listaAmigos=[];
+let listadoAmigos=[];
 let numeroMaximo= 0;
 
 function agregarAmigo() {
@@ -10,22 +10,38 @@ function agregarAmigo() {
     let nombreIngresado = document.getElementById("amigo").value;
    
    
-    if (nombreIngresado.trim() !== "") {
+    if (nombreIngresado.trim().length === 0) {
         alert("Nombre no valido");
-         } else {
-         // Agregar a la lista (array)
-    listaAmigos.push(nombreIngresado);
-        }
-    // Mostrar en la lista HTML
-    let lista = document.getElementById("listaAmigos");
-    lista.innerHTML += "<li>" + nombreIngresado + "</li>";
+        numeroMaximo--
+       } else {
+     
     
+        // Agregar a la lista (array)
+    listadoAmigos.push(nombreIngresado.trim());
+      }
+    
+              
+        // Seleccionamos el elemento ul del HTML
+        const lista = document.getElementById("listaAmigos");
+        
+        // Limpiamos el contenido previo
+        lista.innerHTML = "";
+        
+        // Bucle for tradicional para recorrer listadoAmigos
+        for (let i = 0; i < listadoAmigos.length; i++) {
+           // lista.innerHTML += `<li>${listadoAmigos[i]}</li>`;
+           lista.innerHTML += "<li>" + listadoAmigos[i] + "</li>";
+          
+        }
+    
+
     // Limpiar la caja (el input)
     document.getElementById("amigo").value = "";
 
+    //Opcion a implementar
     numeroMaximo++
 
-    console.log(listaAmigos);
+    console.log(listadoAmigos);
    
     console.log (numeroMaximo);
 
@@ -36,3 +52,4 @@ function agregarAmigo() {
     }  
    
 }
+
