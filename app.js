@@ -15,16 +15,14 @@ function agregarAmigo() {
         alert("Nombre no valido");
        // numeroMaximo--
       
-        //Verificar que el nombre no se repeta
-
+        //Verificar que el nombre no se repita
     } else if(listadoAmigos.includes(nombreIngresado.trim())){
           alert("El Nombre ya esta en la lista"); 
         }
          // Agregar a la lista (array)
         else {
-       
-        listadoAmigos.push(nombreIngresado.trim());
-      }
+              listadoAmigos.push(nombreIngresado.trim());
+        }
     
     actualizarLista() 
  
@@ -42,8 +40,8 @@ function agregarAmigo() {
       //  alert("Máximo 5 Amigos, pulse Sortear Amigo");
    // } else {
       //  return;
+    return;
 }  
-   
 
 
 function actualizarLista() {        
@@ -67,7 +65,7 @@ function sortearAmigo() {
     if(listadoAmigos.length === 0){
         alert('No hay amigos para el sorteo')
         resultado.innerHTML = "";
-        return
+        return;
     }else{
         // Generar un numero aleatorio
     let estocast = parseInt(Math.floor(Math.random() * listadoAmigos.length));
@@ -82,6 +80,7 @@ function sortearAmigo() {
         console.log(listadoAmigos);
     // Actualizar la lista en pantalla
        actualizarLista();
+       return;
     }
 
 }
