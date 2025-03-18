@@ -22,6 +22,7 @@ function agregarAmigo() {
          // Agregar a la lista (array)
         else {
               listadoAmigos.push(nombreIngresado.trim());
+              amigo.focus();
         }
     
     actualizarLista() 
@@ -32,9 +33,9 @@ function agregarAmigo() {
     // Opcion a implementar
     // numeroMaximo++
 
-    console.log(listadoAmigos);
+    //console.log(listadoAmigos);
    
-    console.log (numeroMaximo);
+    // console.log (numeroMaximo);
 
     // if (numeroMaximo >5) {
       //  alert("Máximo 5 Amigos, pulse Sortear Amigo");
