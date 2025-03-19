@@ -37,8 +37,8 @@ function agregarAmigo() {
    
     // console.log (numeroMaximo);
 
-    // if (numeroMaximo >5) {
-      //  alert("Máximo 5 Amigos, pulse Sortear Amigo");
+    // if (numeroMaximo >10) {
+      //  alert("Máximo 10 Amigos, pulse Sortear Amigo");
    // } else {
       //  return;
     return;
@@ -78,7 +78,7 @@ function sortearAmigo() {
 
     // Eliminar el amigo de la lista
        listadoAmigos.splice(estocast, 1);
-        console.log(listadoAmigos);
+    // console.log(listadoAmigos);
     // Actualizar la lista en pantalla
        actualizarLista();
        return;
